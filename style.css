@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+#sliders {
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    flex-direction: row;
+    color: white;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+#sliders div {
+    display: flex;
+    flex-direction: column;
+}
+
+#reset {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 680px) {
+    #reset {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #sliders {
+        margin: 0 1rem;
+        flex-direction: column;
+    }
+}

@@ -1,16 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { World } from 'cannon-es'
 import * as CANNON from 'cannon-es'
-import * as dat from 'dat.gui';
-import { Can } from './Components/Physics/can';
-import { canMesh } from './Components/Model/can';
-import { Sphere } from './Components/Physics/sphere';
-import { Plane } from './Components/Physics/plane';
-import { sphereMesh } from './Components/Model/sphere';
-import { planeMesh } from './Components/Model/plane';
-import { Directional } from './Components/Lights/directional';
+import { Can, canMesh, Sphere, Plane, sphereMesh, planeMesh, Directional } from './Components/';
 
 const Xvel = document.getElementById("Xvelocity")
 const Yvel = document.getElementById("Yvelocity")
