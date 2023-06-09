@@ -5,19 +5,20 @@
 	<meta charset="utf-8">
 	<title>Roll the ball</title>
 	<link rel = "stylesheet" href="./style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
 	<div id="sliders">
-		<div>
+		<div class = "setVel">
 			<label for="Xvelocity">X Velocity</label>
 			<input type="range" min="0" max="50" id="Xvelocity" value="0" />
 		</div>
-		<div>
+		<div class = "setVel">
 			<label for="Yvelocity">Jump Velocity</label>
 			<input type="range" min="0" max="10" id="Yvelocity" value="0" />
 		</div>
-		<div>
+		<div class = "setVel">
 			<label for="Zvelocity">Forward Velocity</label>
 			<input type="range" min="0" max="50" id="Zvelocity" value="0" />
 		</div>
@@ -27,8 +28,8 @@
 		</div>
 	</div>
 	<div class = "reset-mobile">
-		<button id = "reset-ball"></button>
-		<button id = "reset-pins"></button>
+		<button id = "reset-ball">B</button>
+		<button id = "reset-pins">P</button>
 	</div>
 	<script type="module" src="/main.js"></script>
 </body>
