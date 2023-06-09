@@ -23,13 +23,41 @@ body {
     margin-left: auto;
 }
 
-@media screen and (max-width: 680px) {
+.reset-mobile {
+    position: absolute;
+    display: none;
+    gap: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+#reset-ball,
+#reset-pins {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 999px;
+}
+
+#reset-ball {
+    background: orangered;
+}
+
+#reset-pins {
+    background: red;
+}
+
+
+@media (max-width: 680px) {
     #reset {
         margin: 0;
     }
+
+    .reset-mobile {
+        display: flex;
+    }
 }
 
-@media screen and (max-width: 530px) {
+@media (max-width: 430px) {
     #sliders {
         margin: 0 1rem;
         flex-direction: column;

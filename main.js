@@ -6,6 +6,8 @@ import { Can, canMesh, Sphere, Plane, sphereMesh, planeMesh, Directional } from 
 const Xvel = document.getElementById("Xvelocity")
 const Yvel = document.getElementById("Yvelocity")
 const Zvel = document.getElementById("Zvelocity")
+const resetBallMobile = document.getElementById("reset-ball")
+const resetCansMobile = document.getElementById("reset-pins")
 const canPos = [[8.8, 1, -15], [10.4, 1, -15], [12, 1, -15], [9.6, 4, -15], [11.2, 4, -15], [10.4, 8, -15]]
 
 const raycaster = new THREE.Raycaster();
@@ -119,6 +121,20 @@ window.addEventListener("keydown", e => {
             item.angularVelocity.set(0, 0, 0);
         })
     }
+})
+
+resetBallMobile.addEventListener("click", () => {
+    sphere.position.set(0, 8, 20)
+    sphere.velocity.set(0, 0, 0)
+})
+
+resetCansMobile.addEventListener("click", () => {
+    can.map((item, idx) => {
+        item.position.set(...canPos[idx])
+        item.velocity.set(0, 0, 0)
+        item.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), 0);
+        item.angularVelocity.set(0, 0, 0);
+    })
 })
 
 animate();
