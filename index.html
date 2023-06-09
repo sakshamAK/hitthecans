@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Roll the ball</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		#sliders {
+			display: flex;
+			position: absolute;
+			gap: 1rem;
+			margin: 1rem;
+			padding: 1rem;
+			flex-direction: row;
+			color: white;
+			width: 90%;
+		}
+
+		#sliders div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#reset {
+			margin-left: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="sliders">
+		<div>
+			<label for="Xvelocity">X Velocity</label>
+			<input type="range" min="0" max="50" id="Xvelocity" value="0" />
+		</div>
+		<div>
+			<label for="Yvelocity">Jump Velocity</label>
+			<input type="range" min="0" max="10" id="Yvelocity" value="0" />
+		</div>
+		<div>
+			<label for="Zvelocity">Forward Velocity</label>
+			<input type="range" min="0" max="50" id="Zvelocity" value="0" />
+		</div>
+		<div id="reset">
+			<div>Press 'R' to reset the ball.</div>
+			<div>Press 'T' to reset the pins.</div>
+		</div>
+
+	</div>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
